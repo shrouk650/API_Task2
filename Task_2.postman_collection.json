@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "38ffab3f-090d-4203-8c21-20c90987ea83",
+		"name": "Task_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "assertion_json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//value with title(open market order ....)\r",
+							"console.log(pm.response.json().dataset[1891].title)\r",
+							"//second value with context parameter\r",
+							"console.log(pm.response.json()['@context'])\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://data.cityofnewyork.us/data.json",
+					"protocol": "https",
+					"host": [
+						"data",
+						"cityofnewyork",
+						"us"
+					],
+					"path": [
+						"data.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
